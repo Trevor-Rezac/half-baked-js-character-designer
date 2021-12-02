@@ -26,15 +26,18 @@ headDropdown.addEventListener('change', () => {
     // increment the head change count state
     headCount++;
     // update the dom for the head
+    
+    headEl.style.backgroundImage = `url(./assets/${headID}-head.png)`;
 
-    if (headEl.hasChildNodes()) { // if it has an image
-        const imageEl = headEl.firstChild;
-        headEl.removeChild(imageEl); // remove the image
-    }
-
-    const headImg = document.createElement('img');
-    headImg.src = `./assets/${headID}-head.png`;
-    headEl.append(headImg);
+    // the following two code blocks are not needed due to the line above
+    // if (headEl.hasChildNodes()) { // if it has an image
+    //     const imageEl = headEl.firstChild;
+    //     headEl.removeChild(imageEl); // remove the image
+    // }
+    
+    // const headImg = document.createElement('img');
+    // headImg.src = `./assets/${headID}-head.png`;
+    // headEl.append(headImg);
     
     // update the stats to show the new count
     displayStats();
@@ -47,14 +50,19 @@ middleDropdown.addEventListener('change', () => {
     // increment the middle change count state
     middleCount++;
     // update the dom for the middle
-    if (middleEl.hasChildNodes()) { // if it has an image
-        const imageEl = middleEl.firstChild;
-        middleEl.removeChild(imageEl); // remove the image
-    }
 
-    const middleImg = document.createElement('img');
-    middleImg.src = `./assets/${middleID}-middle.png`;
-    middleEl.append(middleImg);
+    middleEl.style.backgroundImage = `url(./assets/${middleID}-middle.png)`;
+
+    // the following two code blocks are not needed due to the line above
+    // if (middleEl.hasChildNodes()) { // if it has an image
+    //     const imageEl = middleEl.firstChild;
+    //     middleEl.removeChild(imageEl); // remove the image
+    // }
+
+    // const middleImg = document.createElement('img');
+    // middleImg.src = `./assets/${middleID}-middle.png`;
+    // middleEl.append(middleImg);
+
     // update the stats to show the new count
 
     displayStats();
@@ -67,14 +75,19 @@ bottomDropdown.addEventListener('change', () => {
     // increment the bottom change count state
     bottomCount++;
     // update the dom for the bottom
-    if (bottomEl.hasChildNodes()) { // if it has an image
-        const imageEl = bottomEl.firstChild;
-        bottomEl.removeChild(imageEl); // remove the image
-    }
 
-    const bottomImg = document.createElement('img');
-    bottomImg.src = `./assets/${bottomID}-pants.png`;
-    bottomEl.append(bottomImg);
+    bottomEl.style.backgroundImage = `url(./assets/${bottomID}-pants.png)`;
+
+    // the following two code blocks are not needed due to the line above
+    // if (bottomEl.hasChildNodes()) { // if it has an image
+    //     const imageEl = bottomEl.firstChild;
+    //     bottomEl.removeChild(imageEl); // remove the image
+    // }
+
+    // const bottomImg = document.createElement('img');
+    // bottomImg.src = `./assets/${bottomID}-pants.png`;
+    // bottomEl.append(bottomImg);
+
     // update the stats to show the new count
     displayStats();
 });
